@@ -10,6 +10,5 @@ class Solution(object):
             if i != val:
                 nums[count] = i
                 count += 1
-        nums = nums[:count]
-        print(nums)
+        print(count)
         return count
