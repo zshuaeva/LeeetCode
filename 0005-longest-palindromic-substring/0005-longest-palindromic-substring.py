@@ -25,7 +25,7 @@ class Solution(object):
 
         for length in range(3, n + 1):
             for i in range(n - length + 1):
-                j = i + length - 1  # Ending index of the current substring
+                j = i + length - 1
 
                 if s[i] == s[j] and is_palindrome[i + 1][j - 1]:
                     is_palindrome[i][j] = True
