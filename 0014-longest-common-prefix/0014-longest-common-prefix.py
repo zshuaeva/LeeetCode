@@ -1,20 +1,15 @@
-from typing import List
-
-class Solution:
-    def longestCommonPrefix(self, strs: List[str]) -> str:
-
+class Solution(object):
+    def longestCommonPrefix(self, strs):
+        """
+        :type strs: List[str]
+        :rtype: str
+        """
         if not strs:
             return ""
 
-        longest = strs[0]
+        for i in range(len(strs[0])):
+            for string in strs[1:]:
+                if i >= len(string) or string[i] != strs[0][i]:
+                    return strs[0][:i]
 
-        for word in strs[1:]:
-            i = 0
-            while i < len(longest) and i < len(word) and longest[i] == word[i]:
-                i += 1
-            longest = longest[:i]
-            
-            if not longest:
-                return ""
-
-        return longest
+        return strs[0]
