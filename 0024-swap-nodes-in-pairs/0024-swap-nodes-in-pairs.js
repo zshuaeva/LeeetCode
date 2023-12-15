@@ -12,7 +12,6 @@
  */
 var swapPairs = function (head) {
     if (!head || !head.next) {
-        // If the list has zero or one node, no swapping is needed.
         return head;
     }
     const dummy = new ListNode(0);
